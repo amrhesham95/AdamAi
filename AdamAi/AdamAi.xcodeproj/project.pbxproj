@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9886FF24DB2251004AAE1C /* AppDelegate.swift */; };
 		EF98870224DB2251004AAE1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98870124DB2251004AAE1C /* SceneDelegate.swift */; };
-		EF98870424DB2251004AAE1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98870324DB2251004AAE1C /* ViewController.swift */; };
+		EF98870424DB2251004AAE1C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98870324DB2251004AAE1C /* WelcomeViewController.swift */; };
 		EF98870724DB2251004AAE1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF98870524DB2251004AAE1C /* Main.storyboard */; };
 		EF98870A24DB2251004AAE1C /* AdamAi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF98870824DB2251004AAE1C /* AdamAi.xcdatamodeld */; };
 		EF98870C24DB2254004AAE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF98870B24DB2254004AAE1C /* Assets.xcassets */; };
 		EF98870F24DB2254004AAE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF98870D24DB2254004AAE1C /* LaunchScreen.storyboard */; };
+		EF98871724DB247E004AAE1C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871624DB247E004AAE1C /* Observable.swift */; };
+		EF98871924DB2936004AAE1C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871824DB2936004AAE1C /* WelcomeViewModel.swift */; };
+		EF98871B24DB2981004AAE1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871A24DB2981004AAE1C /* User.swift */; };
+		EFD1534824DB36D900A2E47E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD1534724DB36D900A2E47E /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF9886FC24DB2251004AAE1C /* AdamAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdamAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9886FF24DB2251004AAE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF98870124DB2251004AAE1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF98870324DB2251004AAE1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF98870324DB2251004AAE1C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EF98870624DB2251004AAE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF98870924DB2251004AAE1C /* AdamAi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AdamAi.xcdatamodel; sourceTree = "<group>"; };
 		EF98870B24DB2254004AAE1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF98870E24DB2254004AAE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF98871024DB2254004AAE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF98871624DB247E004AAE1C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		EF98871824DB2936004AAE1C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		EF98871A24DB2981004AAE1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EFD1534724DB36D900A2E47E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,11 @@
 		EF9886FE24DB2251004AAE1C /* AdamAi */ = {
 			isa = PBXGroup;
 			children = (
+				EFD1534924DB3EB800A2E47E /* Screens */,
+				EFD1534624DB36AC00A2E47E /* Models */,
 				EF9886FF24DB2251004AAE1C /* AppDelegate.swift */,
 				EF98870124DB2251004AAE1C /* SceneDelegate.swift */,
-				EF98870324DB2251004AAE1C /* ViewController.swift */,
+				EF98871624DB247E004AAE1C /* Observable.swift */,
 				EF98870524DB2251004AAE1C /* Main.storyboard */,
 				EF98870B24DB2254004AAE1C /* Assets.xcassets */,
 				EF98870D24DB2254004AAE1C /* LaunchScreen.storyboard */,
@@ -68,6 +78,32 @@
 				EF98870824DB2251004AAE1C /* AdamAi.xcdatamodeld */,
 			);
 			path = AdamAi;
+			sourceTree = "<group>";
+		};
+		EFD1534624DB36AC00A2E47E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF98871A24DB2981004AAE1C /* User.swift */,
+				EFD1534724DB36D900A2E47E /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFD1534924DB3EB800A2E47E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EFD1534A24DB3EBF00A2E47E /* WelcomeScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		EFD1534A24DB3EBF00A2E47E /* WelcomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EF98871824DB2936004AAE1C /* WelcomeViewModel.swift */,
+				EF98870324DB2251004AAE1C /* WelcomeViewController.swift */,
+			);
+			path = WelcomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF98870A24DB2251004AAE1C /* AdamAi.xcdatamodeld in Sources */,
-				EF98870424DB2251004AAE1C /* ViewController.swift in Sources */,
+				EF98871924DB2936004AAE1C /* WelcomeViewModel.swift in Sources */,
+				EF98871724DB247E004AAE1C /* Observable.swift in Sources */,
+				EF98870424DB2251004AAE1C /* WelcomeViewController.swift in Sources */,
+				EFD1534824DB36D900A2E47E /* Contact.swift in Sources */,
 				EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */,
 				EF98870224DB2251004AAE1C /* SceneDelegate.swift in Sources */,
+				EF98871B24DB2981004AAE1C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
