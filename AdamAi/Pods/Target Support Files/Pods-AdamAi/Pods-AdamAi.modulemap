@@ -1,0 +1,6 @@
+framework module Pods_AdamAi {
+  umbrella header "Pods-AdamAi-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,16 +7,35 @@
 //
 
 import Foundation
-enum Gender{
-    case MALE
-    case FEMALE
+import Realm
+import RealmSwift
+
+@objc enum Gender: Int, RealmEnum {
+   case NOTSET
+   case MALE
+   case FEMALE
 }
-struct Contact {
-    var name:String
-    var phoneNumber:String
-    var email:String?
-    var nickName:String?
-    var image:String?
-    var gender:Gender?
-   
+class Contact:Object {
+    @objc dynamic var name:String
+    @objc dynamic var phoneNumber:String
+    @objc dynamic var email:String?
+    @objc dynamic var nickName:String?
+    @objc dynamic var image:String?
+    @objc dynamic var kkk:String?
+    @objc dynamic var gender = Gender.NOTSET
+//    if we choose ly the following we cannot change it later as it constant
+//    let gender = RealmOptional<Gender>()
+    @objc dynamic var owner:String
+    init(name:String, phoneNumber:String, owner:String) {
+        self.name = name
+        self.phoneNumber = phoneNumber
+        self.owner = owner
+        super.init()
+    }
+    required init() {
+        self.name = ""
+        self.phoneNumber = ""
+        self.owner = ""
+    }
+    
 }

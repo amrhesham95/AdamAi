@@ -7,6 +7,7 @@
 //
 
 import Foundation
-struct User {
+import RealmSwift
+struct User{
     var phoneNumber:String
 }

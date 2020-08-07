@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class WelcomeViewController: UIViewController {
     @IBOutlet weak var phoneNumberTF: UITextField!
@@ -17,11 +19,18 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        print(Realm.Configuration.defaultConfiguration.fileURL)
         // Do any additional setup after loading the view.
     }
-
     @IBAction func loginBtnAction(_ sender: UIButton) {
-        welcomeVM.authenticateUser(phoneNumber: phoneNumberTF.text ?? "")
+        let loginSuccess = welcomeVM.authenticateUser(phoneNumber: phoneNumberTF.text ?? "")
+        if loginSuccess {
+            //navigate
+            let contactListVC = (self.storyboard?.instantiateViewController(identifier: "ContactListViewController")) ?? UIViewController()
+            self.navigationController?.pushViewController(contactListVC, animated: true)
+        }else{
+            // show error
+        }
     }
     
     func initUI(){

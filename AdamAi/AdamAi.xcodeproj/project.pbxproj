@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7A696FCD0E50703BE2EFEDE /* Pods_AdamAi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C05028B3B3A2CEFC0A42C27 /* Pods_AdamAi.framework */; };
+		EF8EC31524DDBB20000C589D /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8EC31424DDBB20000C589D /* extensions.swift */; };
 		EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9886FF24DB2251004AAE1C /* AppDelegate.swift */; };
 		EF98870224DB2251004AAE1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98870124DB2251004AAE1C /* SceneDelegate.swift */; };
 		EF98870424DB2251004AAE1C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98870324DB2251004AAE1C /* WelcomeViewController.swift */; };
@@ -18,9 +20,18 @@
 		EF98871924DB2936004AAE1C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871824DB2936004AAE1C /* WelcomeViewModel.swift */; };
 		EF98871B24DB2981004AAE1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871A24DB2981004AAE1C /* User.swift */; };
 		EFD1534824DB36D900A2E47E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD1534724DB36D900A2E47E /* Contact.swift */; };
+		EFD66F3A24DC7B9D00EF1BFF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */; };
+		EFD66F3C24DC7BA700EF1BFF /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */; };
+		EFD66F3E24DC826300EF1BFF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3D24DC826300EF1BFF /* Database.swift */; };
+		EFD66F4024DC82AD00EF1BFF /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */; };
+		EFD66F4224DC908B00EF1BFF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F4124DC908B00EF1BFF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		037FF41FA3FAF3AAB51469CB /* Pods-AdamAi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdamAi.release.xcconfig"; path = "Target Support Files/Pods-AdamAi/Pods-AdamAi.release.xcconfig"; sourceTree = "<group>"; };
+		3C05028B3B3A2CEFC0A42C27 /* Pods_AdamAi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdamAi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F5D46B6621A89AA1EE3B82 /* Pods-AdamAi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdamAi.debug.xcconfig"; path = "Target Support Files/Pods-AdamAi/Pods-AdamAi.debug.xcconfig"; sourceTree = "<group>"; };
+		EF8EC31424DDBB20000C589D /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		EF9886FC24DB2251004AAE1C /* AdamAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdamAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9886FF24DB2251004AAE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF98870124DB2251004AAE1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +45,11 @@
 		EF98871824DB2936004AAE1C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		EF98871A24DB2981004AAE1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EFD1534724DB36D900A2E47E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		EFD66F3D24DC826300EF1BFF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
+		EFD66F4124DC908B00EF1BFF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +57,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A696FCD0E50703BE2EFEDE /* Pods_AdamAi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68FB75E90F9D0AC3E5BF1CC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5D46B6621A89AA1EE3B82 /* Pods-AdamAi.debug.xcconfig */,
+				037FF41FA3FAF3AAB51469CB /* Pods-AdamAi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8C49C1936419E610FD4AC1F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C05028B3B3A2CEFC0A42C27 /* Pods_AdamAi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF8EC31324DD76E3000C589D /* AddContactScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddContactScreen;
+			sourceTree = "<group>";
+		};
 		EF9886F324DB2251004AAE1C = {
 			isa = PBXGroup;
 			children = (
 				EF9886FE24DB2251004AAE1C /* AdamAi */,
 				EF9886FD24DB2251004AAE1C /* Products */,
+				68FB75E90F9D0AC3E5BF1CC4 /* Pods */,
+				8C49C1936419E610FD4AC1F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +112,10 @@
 				EFD1534924DB3EB800A2E47E /* Screens */,
 				EFD1534624DB36AC00A2E47E /* Models */,
 				EF9886FF24DB2251004AAE1C /* AppDelegate.swift */,
+				EF8EC31424DDBB20000C589D /* extensions.swift */,
+				EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */,
+				EFD66F4124DC908B00EF1BFF /* ViewModel.swift */,
+				EFD66F3D24DC826300EF1BFF /* Database.swift */,
 				EF98870124DB2251004AAE1C /* SceneDelegate.swift */,
 				EF98871624DB247E004AAE1C /* Observable.swift */,
 				EF98870524DB2251004AAE1C /* Main.storyboard */,
@@ -92,6 +139,8 @@
 		EFD1534924DB3EB800A2E47E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EF8EC31324DD76E3000C589D /* AddContactScreen */,
+				EFD66F3824DC7B8500EF1BFF /* MainScreen */,
 				EFD1534A24DB3EBF00A2E47E /* WelcomeScreen */,
 			);
 			path = Screens;
@@ -106,6 +155,15 @@
 			path = WelcomeScreen;
 			sourceTree = "<group>";
 		};
+		EFD66F3824DC7B8500EF1BFF /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */,
+				EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF98871324DB2254004AAE1C /* Build configuration list for PBXNativeTarget "AdamAi" */;
 			buildPhases = (
+				513847CBDB89B8B92D70B293 /* [CP] Check Pods Manifest.lock */,
 				EF9886F824DB2251004AAE1C /* Sources */,
 				EF9886F924DB2251004AAE1C /* Frameworks */,
 				EF9886FA24DB2251004AAE1C /* Resources */,
+				083EE12958D054C47F184E34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,19 +232,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		083EE12958D054C47F184E34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdamAi/Pods-AdamAi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdamAi/Pods-AdamAi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdamAi/Pods-AdamAi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		513847CBDB89B8B92D70B293 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdamAi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF9886F824DB2251004AAE1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EF98870A24DB2251004AAE1C /* AdamAi.xcdatamodeld in Sources */,
+				EFD66F3E24DC826300EF1BFF /* Database.swift in Sources */,
+				EFD66F3C24DC7BA700EF1BFF /* MainScreenViewModel.swift in Sources */,
+				EF8EC31524DDBB20000C589D /* extensions.swift in Sources */,
 				EF98871924DB2936004AAE1C /* WelcomeViewModel.swift in Sources */,
 				EF98871724DB247E004AAE1C /* Observable.swift in Sources */,
 				EF98870424DB2251004AAE1C /* WelcomeViewController.swift in Sources */,
+				EFD66F4224DC908B00EF1BFF /* ViewModel.swift in Sources */,
+				EFD66F4024DC82AD00EF1BFF /* LocalDatabase.swift in Sources */,
 				EFD1534824DB36D900A2E47E /* Contact.swift in Sources */,
 				EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */,
 				EF98870224DB2251004AAE1C /* SceneDelegate.swift in Sources */,
 				EF98871B24DB2981004AAE1C /* User.swift in Sources */,
+				EFD66F3A24DC7B9D00EF1BFF /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +434,7 @@
 		};
 		EF98871424DB2254004AAE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9F5D46B6621A89AA1EE3B82 /* Pods-AdamAi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +453,7 @@
 		};
 		EF98871524DB2254004AAE1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 037FF41FA3FAF3AAB51469CB /* Pods-AdamAi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
