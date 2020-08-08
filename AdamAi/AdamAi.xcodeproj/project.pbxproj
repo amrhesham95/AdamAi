@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D7A696FCD0E50703BE2EFEDE /* Pods_AdamAi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C05028B3B3A2CEFC0A42C27 /* Pods_AdamAi.framework */; };
 		EF8EC31524DDBB20000C589D /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8EC31424DDBB20000C589D /* extensions.swift */; };
+		EF8EC31724DEF3D1000C589D /* AddContactScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8EC31624DEF3D1000C589D /* AddContactScreenViewController.swift */; };
+		EF8EC31924DF07B7000C589D /* AddContactScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8EC31824DF07B7000C589D /* AddContactScreenViewModel.swift */; };
 		EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9886FF24DB2251004AAE1C /* AppDelegate.swift */; };
 		EF98870224DB2251004AAE1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98870124DB2251004AAE1C /* SceneDelegate.swift */; };
 		EF98870424DB2251004AAE1C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98870324DB2251004AAE1C /* WelcomeViewController.swift */; };
@@ -32,6 +34,8 @@
 		3C05028B3B3A2CEFC0A42C27 /* Pods_AdamAi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdamAi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F5D46B6621A89AA1EE3B82 /* Pods-AdamAi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdamAi.debug.xcconfig"; path = "Target Support Files/Pods-AdamAi/Pods-AdamAi.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8EC31424DDBB20000C589D /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		EF8EC31624DEF3D1000C589D /* AddContactScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreenViewController.swift; sourceTree = "<group>"; };
+		EF8EC31824DF07B7000C589D /* AddContactScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreenViewModel.swift; sourceTree = "<group>"; };
 		EF9886FC24DB2251004AAE1C /* AdamAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdamAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9886FF24DB2251004AAE1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF98870124DB2251004AAE1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		EF8EC31324DD76E3000C589D /* AddContactScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EF8EC31624DEF3D1000C589D /* AddContactScreenViewController.swift */,
+				EF8EC31824DF07B7000C589D /* AddContactScreenViewModel.swift */,
 			);
 			path = AddContactScreen;
 			sourceTree = "<group>";
@@ -290,7 +296,9 @@
 				EFD66F4024DC82AD00EF1BFF /* LocalDatabase.swift in Sources */,
 				EFD1534824DB36D900A2E47E /* Contact.swift in Sources */,
 				EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */,
+				EF8EC31924DF07B7000C589D /* AddContactScreenViewModel.swift in Sources */,
 				EF98870224DB2251004AAE1C /* SceneDelegate.swift in Sources */,
+				EF8EC31724DEF3D1000C589D /* AddContactScreenViewController.swift in Sources */,
 				EF98871B24DB2981004AAE1C /* User.swift in Sources */,
 				EFD66F3A24DC7B9D00EF1BFF /* MainScreenViewController.swift in Sources */,
 			);

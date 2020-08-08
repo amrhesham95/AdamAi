@@ -99,28 +99,140 @@
                     <connections>
                         <outlet property="addContactButton" destination="a6c-bI-rhE" id="Cqq-ET-NPK"/>
                         <outlet property="contactListTableView" destination="Ftr-Jm-fkG" id="myi-UM-TKS"/>
-                        <segue destination="Cc4-nd-xaL" kind="push" id="diR-L6-wKU"/>
+                        <segue destination="sM1-w6-pls" kind="push" id="bcu-b0-GAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZW-pe-bOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1840" y="117"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="op9-N0-DKc">
+        <!--Add Contact Screen View Controller-->
+        <scene sceneID="eOS-uJ-5eh">
             <objects>
-                <viewController id="Cc4-nd-xaL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YFu-cd-umq">
+                <viewController storyboardIdentifier="AddContactScreenViewController" id="sM1-w6-pls" customClass="AddContactScreenViewController" customModule="AdamAi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irn-mU-OHf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfW-3D-OhR">
+                                <rect key="frame" x="0.0" y="98" width="169" height="714"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hns-20-LkI" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="169" height="410"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oYp-gj-xg1" userLabel="image Stack View">
+                                                <rect key="frame" x="20" y="20" width="129" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FiL-Sj-alu">
+                                                        <rect key="frame" x="0.0" y="0.5" width="129" height="99"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="0p0-lA-Jzd"/>
+                                                            <constraint firstAttribute="height" constant="100" id="j2a-8h-UuK"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="FiL-Sj-alu" firstAttribute="centerX" secondItem="oYp-gj-xg1" secondAttribute="centerX" id="5rl-y1-ouN"/>
+                                                    <constraint firstItem="FiL-Sj-alu" firstAttribute="centerY" secondItem="oYp-gj-xg1" secondAttribute="centerY" id="mKG-Ha-Kfu"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V6A-56-gK4">
+                                                <rect key="frame" x="20" y="140" width="129" height="250"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpV-tH-5uU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGr-ef-6WD">
+                                                        <rect key="frame" x="0.0" y="54" width="129" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-UX-dEE">
+                                                        <rect key="frame" x="0.0" y="108" width="129" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sN1-Yo-fkw">
+                                                        <rect key="frame" x="0.0" y="162" width="129" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uhw-Sw-Who">
+                                                        <rect key="frame" x="0.0" y="216" width="129" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="IpV-tH-5uU" firstAttribute="top" secondItem="V6A-56-gK4" secondAttribute="top" id="GFe-M8-cfT"/>
+                                                    <constraint firstItem="IpV-tH-5uU" firstAttribute="leading" secondItem="V6A-56-gK4" secondAttribute="leading" id="K1L-PC-gx3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IpV-tH-5uU" secondAttribute="trailing" id="QnR-qK-0YF"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="V6A-56-gK4" secondAttribute="bottom" constant="20" id="6Gz-NJ-psU"/>
+                                            <constraint firstAttribute="trailing" secondItem="V6A-56-gK4" secondAttribute="trailing" constant="20" id="HeZ-xv-SUK"/>
+                                            <constraint firstItem="oYp-gj-xg1" firstAttribute="leading" secondItem="V6A-56-gK4" secondAttribute="leading" id="Pm1-EU-MRD"/>
+                                            <constraint firstItem="V6A-56-gK4" firstAttribute="leading" secondItem="Hns-20-LkI" secondAttribute="leading" constant="20" id="Yua-Ww-y9E"/>
+                                            <constraint firstItem="oYp-gj-xg1" firstAttribute="trailing" secondItem="V6A-56-gK4" secondAttribute="trailing" id="dSm-gU-Cno"/>
+                                            <constraint firstItem="oYp-gj-xg1" firstAttribute="top" secondItem="Hns-20-LkI" secondAttribute="top" constant="20" id="hwg-Hu-7IE"/>
+                                            <constraint firstItem="oYp-gj-xg1" firstAttribute="bottom" secondItem="V6A-56-gK4" secondAttribute="top" constant="-20" id="u66-c9-i3l"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Hns-20-LkI" secondAttribute="bottom" id="aM8-Cr-zSj"/>
+                                    <constraint firstItem="Hns-20-LkI" firstAttribute="top" secondItem="cfW-3D-OhR" secondAttribute="top" id="h43-9z-VfI"/>
+                                    <constraint firstItem="Hns-20-LkI" firstAttribute="leading" secondItem="cfW-3D-OhR" secondAttribute="leading" id="hJd-vh-MaX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hns-20-LkI" secondAttribute="trailing" id="xW9-nf-i9k"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wRi-l7-Zzj"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zdA-eJ-mfu"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pah-YJ-NZY">
+                                <rect key="frame" x="0.0" y="822" width="169" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujK-oq-SYP">
+                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pw9-Wf-v7u">
+                                        <rect key="frame" x="84.5" y="0.0" width="84.5" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Jkl-GJ-SUy"/>
+                        <constraints>
+                            <constraint firstItem="Pah-YJ-NZY" firstAttribute="top" secondItem="cfW-3D-OhR" secondAttribute="bottom" constant="10" id="3by-fs-q10"/>
+                            <constraint firstItem="cfW-3D-OhR" firstAttribute="top" secondItem="HEU-8V-Etx" secondAttribute="top" constant="10" id="3vm-we-mcT"/>
+                            <constraint firstItem="Hns-20-LkI" firstAttribute="width" secondItem="irn-mU-OHf" secondAttribute="width" id="9CU-2j-1h7"/>
+                            <constraint firstItem="cfW-3D-OhR" firstAttribute="leading" secondItem="irn-mU-OHf" secondAttribute="leading" id="AHq-rK-ATB"/>
+                            <constraint firstItem="cfW-3D-OhR" firstAttribute="trailing" secondItem="irn-mU-OHf" secondAttribute="trailing" id="BFA-rq-aGc"/>
+                            <constraint firstItem="Pah-YJ-NZY" firstAttribute="bottom" secondItem="HEU-8V-Etx" secondAttribute="bottom" constant="-10" id="Q6R-F5-uYM"/>
+                            <constraint firstAttribute="trailing" secondItem="Pah-YJ-NZY" secondAttribute="trailing" id="lRG-Xi-6ak"/>
+                            <constraint firstItem="Pah-YJ-NZY" firstAttribute="leading" secondItem="irn-mU-OHf" secondAttribute="leading" id="noh-wG-ihk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HEU-8V-Etx"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wwk-qV-SCi"/>
+                    <navigationItem key="navigationItem" id="bdu-6Z-1Vs"/>
+                    <connections>
+                        <outlet property="contactImageView" destination="FiL-Sj-alu" id="zIt-sZ-vGP"/>
+                        <outlet property="emailTextField" destination="K9l-UX-dEE" id="V8n-jf-egu"/>
+                        <outlet property="genderTextField" destination="Uhw-Sw-Who" id="oX1-Od-l6J"/>
+                        <outlet property="nameTextField" destination="IpV-tH-5uU" id="wQr-lc-YsE"/>
+                        <outlet property="nicknameTextField" destination="sN1-Yo-fkw" id="O7P-Qb-bDk"/>
+                        <outlet property="phoneNumberTextField" destination="aGr-ef-6WD" id="0de-Jz-xzR"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yxi-wN-Bej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoC-Kx-Y06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2616" y="119"/>
+            <point key="canvasLocation" x="2748" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FcN-bg-2z1">
@@ -143,5 +255,6 @@
     </scenes>
     <resources>
         <image name="hand.thumbsup.fill" catalog="system" width="64" height="62"/>
+        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

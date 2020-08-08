@@ -26,8 +26,8 @@ class WelcomeViewController: UIViewController {
         let loginSuccess = welcomeVM.authenticateUser(phoneNumber: phoneNumberTF.text ?? "")
         if loginSuccess {
             //navigate
-            let contactListVC = (self.storyboard?.instantiateViewController(identifier: "ContactListViewController")) ?? UIViewController()
-            self.navigationController?.pushViewController(contactListVC, animated: true)
+            let contactListViewController = (self.storyboard?.instantiateViewController(identifier: "ContactListViewController")) ?? UIViewController()
+            self.navigationController?.pushViewController(contactListViewController, animated: true)
         }else{
             // show error
         }

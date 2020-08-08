@@ -32,8 +32,10 @@ class MainScreenViewController:UIViewController {
     //MARK:- actions
     @IBAction func addContactButtonAction(_ sender: Any) {
 //        mainScreenVM.database.addContact(contact: "addedElement")
-        mainScreenVM.database.saveToDatabase(contact: Contact(name: "amr", phoneNumber: "01009005103", owner: "1"))
+//        mainScreenVM.database.saveToDatabase(contact: Contact(name: "amr", phoneNumber: "01009005103", owner: "1"))
         print(mainScreenVM.contactList.value)
+         let addContactScreenViewController = (self.storyboard?.instantiateViewController(identifier: "AddContactScreenViewController")) ?? UIViewController()
+                   self.navigationController?.pushViewController(addContactScreenViewController, animated: true)
     }
 }
 
