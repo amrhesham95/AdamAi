@@ -11,5 +11,5 @@ protocol Database {
     func getAllContacts() -> Observable<Array<Contact>>
     func getContactsWith(string:String)
     func addContact(contact: Contact)
-    func saveToDatabase(contact:Contact)
+    func saveToDatabase(contact:Contact) -> Bool
 }

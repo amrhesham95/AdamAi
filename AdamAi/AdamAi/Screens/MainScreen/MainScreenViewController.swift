@@ -15,7 +15,7 @@ class MainScreenViewController:UIViewController {
     @IBOutlet weak var addContactButton: UIBarButtonItem!
     lazy var mainScreenVM : MainScreenViewModel = {
         // TODO: are we destroying the single responsbility ? we might change the DB to singletone
-        let localDatabase = LocalDatabase()
+        let localDatabase = LocalDatabase.sharedInstance
         let mainScreenVM = MainScreenViewModel(database: localDatabase)
         localDatabase.viewModel = mainScreenVM
         return mainScreenVM
@@ -31,8 +31,6 @@ class MainScreenViewController:UIViewController {
     
     //MARK:- actions
     @IBAction func addContactButtonAction(_ sender: Any) {
-//        mainScreenVM.database.addContact(contact: "addedElement")
-//        mainScreenVM.database.saveToDatabase(contact: Contact(name: "amr", phoneNumber: "01009005103", owner: "1"))
         print(mainScreenVM.contactList.value)
          let addContactScreenViewController = (self.storyboard?.instantiateViewController(identifier: "AddContactScreenViewController")) ?? UIViewController()
                    self.navigationController?.pushViewController(addContactScreenViewController, animated: true)
@@ -50,12 +48,13 @@ extension MainScreenViewController:UITableViewDelegate,UITableViewDataSource,UIS
         let cell = UITableViewCell()
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
                // choose a name for your image
-               let fileName = mainScreenVM.contactList.value[indexPath.row].image ?? ""
+        let fileName = mainScreenVM.contactList.value[indexPath.row].id
                // create the destination file url to save your image
                let fileURL = documentsDirectory.appendingPathComponent(fileName)
         cell.imageView?.image = UIImage(contentsOfFile: fileURL.path)
         cell.imageView?.circleImage()
         cell.textLabel?.text = mainScreenVM.contactList.value[indexPath.row].name
+        cell.detailTextLabel?.text = mainScreenVM.contactList.value[indexPath.row].phoneNumber
         return cell
     }
     
