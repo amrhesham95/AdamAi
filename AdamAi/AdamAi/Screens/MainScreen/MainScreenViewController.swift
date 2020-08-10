@@ -45,17 +45,25 @@ extension MainScreenViewController:UITableViewDelegate,UITableViewDataSource,UIS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+//        let cell = UITableViewCell()
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
                // choose a name for your image
         let fileName = mainScreenVM.contactList.value[indexPath.row].id
                // create the destination file url to save your image
-               let fileURL = documentsDirectory.appendingPathComponent(fileName)
-        cell.imageView?.image = UIImage(contentsOfFile: fileURL.path)
-        cell.imageView?.circleImage()
-        cell.textLabel?.text = mainScreenVM.contactList.value[indexPath.row].name
-        cell.detailTextLabel?.text = mainScreenVM.contactList.value[indexPath.row].phoneNumber
-        return cell
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+//        cell.imageView?.image = UIImage(contentsOfFile: fileURL.path)
+//        cell.imageView?.circleImage()
+//        cell.textLabel?.text = mainScreenVM.contactList.value[indexPath.row].name
+//        cell.detailTextLabel?.text = mainScreenVM.contactList.value[indexPath.row].phoneNumber
+//        return cell
+        
+        //===========
+        let contactCell = tableView.dequeueReusableCell(withIdentifier: "contactCell") as! ContactCellView
+        contactCell.contactNameLabel.text = mainScreenVM.contactList.value[indexPath.row].name
+        contactCell.contactNumberLabel.text = mainScreenVM.contactList.value[indexPath.row].phoneNumber
+        contactCell.contactImageView.image = UIImage(contentsOfFile: fileURL.path)
+        return contactCell
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -65,8 +73,10 @@ extension MainScreenViewController:UITableViewDelegate,UITableViewDataSource,UIS
     
     //MARK:- searchBar method
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        mainScreenVM.database.getContactsWith(string: searchText)
+        mainScreenVM.getContactsWith(string: searchText)
     }
+    
+    
     
     
 }

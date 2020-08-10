@@ -10,8 +10,13 @@ import UIKit
 
 class ContactCellView: UITableViewCell {
 
+    @IBOutlet weak var contactNumberLabel: UILabel!
+    @IBOutlet weak var contactNameLabel: UILabel!
+    @IBOutlet weak var contactImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.contactImageView.circleImage()
         // Initialization code
     }
 
