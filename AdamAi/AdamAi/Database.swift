@@ -8,8 +8,7 @@
 
 import Foundation
 protocol Database {
+    var localList :Observable<Array<Contact>>{get set}
     func getAllContacts() -> Observable<Array<Contact>>
-    func getContactsWith(string:String)
-    func addContact(contact: Contact)
     func saveToDatabase(contact:Contact) -> Bool
 }

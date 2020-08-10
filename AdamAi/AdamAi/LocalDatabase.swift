@@ -69,22 +69,9 @@ class LocalDatabase:Database {
 
     }
     
-    func addContact(contact: Contact) {
-        self.localList.value.append(contact)
-        self.viewModel?.contactList.value.append(contact)
-    }
-    
     func getAllContacts() -> Observable<Array<Contact>> {
         let allContacts = Observable(Array(self.localList.value))
         return allContacts
-    }
-    
-    func getContactsWith(string:String){
-        self.viewModel?.contactList.value = string.isEmpty ? localList.value : localList.value.filter {
-            return $0.name.lowercased().hasPrefix(string.lowercased())
-       }
-        
-        
     }
     
     

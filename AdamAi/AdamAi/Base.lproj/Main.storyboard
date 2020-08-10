@@ -60,6 +60,54 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ftr-Jm-fkG">
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="62" id="qaT-Ez-jjl" customClass="ContactCellView" customModule="AdamAi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qaT-Ez-jjl" id="riB-xh-K3T">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yat-RY-ebL">
+                                                    <rect key="frame" x="82" y="0.0" width="332" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVI-Sd-9rQ">
+                                                    <rect key="frame" x="82" y="31" width="332" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1w8-M5-rBz">
+                                                    <rect key="frame" x="10" y="0.0" width="62" height="62"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vVI-Sd-9rQ" firstAttribute="leading" secondItem="Yat-RY-ebL" secondAttribute="leading" id="0GB-bI-su3"/>
+                                                <constraint firstItem="Yat-RY-ebL" firstAttribute="height" secondItem="1w8-M5-rBz" secondAttribute="height" multiplier="0.5" id="7ds-Rx-wjq"/>
+                                                <constraint firstItem="Yat-RY-ebL" firstAttribute="leading" secondItem="1w8-M5-rBz" secondAttribute="trailing" constant="10" id="9gr-pU-jJ8"/>
+                                                <constraint firstItem="vVI-Sd-9rQ" firstAttribute="trailing" secondItem="Yat-RY-ebL" secondAttribute="trailing" id="Cpj-0I-R8q"/>
+                                                <constraint firstItem="1w8-M5-rBz" firstAttribute="height" secondItem="riB-xh-K3T" secondAttribute="height" id="Eqd-w8-iZr"/>
+                                                <constraint firstItem="Yat-RY-ebL" firstAttribute="top" secondItem="1w8-M5-rBz" secondAttribute="top" id="LYl-I7-1bZ"/>
+                                                <constraint firstItem="vVI-Sd-9rQ" firstAttribute="bottom" secondItem="1w8-M5-rBz" secondAttribute="bottom" id="Pml-4V-997"/>
+                                                <constraint firstItem="1w8-M5-rBz" firstAttribute="top" secondItem="riB-xh-K3T" secondAttribute="top" id="Tpd-2w-EsQ"/>
+                                                <constraint firstItem="1w8-M5-rBz" firstAttribute="leading" secondItem="riB-xh-K3T" secondAttribute="leading" constant="10" id="e3V-Jt-YXh"/>
+                                                <constraint firstItem="1w8-M5-rBz" firstAttribute="width" secondItem="riB-xh-K3T" secondAttribute="height" id="hgw-OJ-PQD"/>
+                                                <constraint firstAttribute="bottom" secondItem="1w8-M5-rBz" secondAttribute="bottom" id="okK-FZ-Z50"/>
+                                                <constraint firstItem="vVI-Sd-9rQ" firstAttribute="height" secondItem="riB-xh-K3T" secondAttribute="height" multiplier="0.5" id="qDv-ve-8BC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yat-RY-ebL" secondAttribute="trailing" id="srU-bX-bff"/>
+                                                <constraint firstItem="1w8-M5-rBz" firstAttribute="centerY" secondItem="riB-xh-K3T" secondAttribute="centerY" id="vIk-L3-7Oj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contactImageView" destination="1w8-M5-rBz" id="wQz-qQ-X1N"/>
+                                            <outlet property="contactNameLabel" destination="Yat-RY-ebL" id="wwa-CF-zYf"/>
+                                            <outlet property="contactNumberLabel" destination="vVI-Sd-9rQ" id="Xad-Pb-ADh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="xNP-2t-xJc" id="RAz-Gs-G3g"/>
                                     <outlet property="delegate" destination="xNP-2t-xJc" id="I12-LN-BkP"/>
@@ -103,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZW-pe-bOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840" y="117"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="116.51785714285714"/>
         </scene>
         <!--Add Contact Screen View Controller-->
         <scene sceneID="eOS-uJ-5eh">
@@ -151,7 +199,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGr-ef-6WD">
                                                         <rect key="frame" x="0.0" y="94.5" width="374" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMe-LY-7zO">
                                                         <rect key="frame" x="0.0" y="148.5" width="374" height="20.5"/>

@@ -14,4 +14,11 @@ class MainScreenViewModel {
         self.database = database
         contactList = self.database.getAllContacts()
     }
+    
+    func getContactsWith(string:String){
+     self.contactList.value = string.isEmpty ? self.database.localList.value : self.database.localList.value.filter {
+         return $0.name.lowercased().hasPrefix(string.lowercased()) || $0.phoneNumber.hasPrefix(string)
+    }
+    }
+    
 }
