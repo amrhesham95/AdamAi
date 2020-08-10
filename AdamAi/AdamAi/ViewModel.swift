@@ -8,5 +8,5 @@
 
 import Foundation
 protocol ViewModel {
-    
+    var contactList:Observable<Array<Contact>>{get set}
 }

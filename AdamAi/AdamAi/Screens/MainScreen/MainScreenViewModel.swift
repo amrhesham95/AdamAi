@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class MainScreenViewModel {
+class MainScreenViewModel:ViewModel {
     var contactList:Observable<Array<Contact>>
     var database:Database
     init(database:Database) {
@@ -23,10 +23,10 @@ class MainScreenViewModel {
     
     func delete(contact:Contact){
         let success = self.database.delete(contact: contact)
-        if success{
-            self.contactList.value = self.database.getAllContacts().value
-            
-        }
+//        if success{
+//            self.contactList.value = self.database.getAllContacts().value
+//
+//        }
     
     }
     

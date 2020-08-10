@@ -11,9 +11,12 @@ import RealmSwift
 import Realm
 class LocalDatabase:Database {
     private init() {
+        self.localList.addObserver(fireNow: false) { [weak self] (contacts) in
+            self?.viewModel?.contactList.value = (self?.localList.value)!
+        }
     }
     static let sharedInstance = LocalDatabase()
-    var viewModel:MainScreenViewModel?
+    var viewModel:ViewModel?
       
        lazy var localList :Observable<Array<Contact>>={
            let realm = try! Realm()
@@ -48,7 +51,7 @@ class LocalDatabase:Database {
         
         try? realm.write { () -> Bool in
             realm.add(contact)
-            viewModel?.contactList.value.append(contact)
+            localList.value.append(contact)
             return true
         }
         
@@ -70,7 +73,7 @@ class LocalDatabase:Database {
               realm.delete(objToBeDelete)
             }
             let result = realm.objects(Contact.self).filter("owner = '1'")
-            self.localList = Observable(Array(result))
+            self.localList.value = Array(result)
             return true
         } catch let error {
             print(error)
