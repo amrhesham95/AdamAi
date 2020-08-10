@@ -21,4 +21,13 @@ class MainScreenViewModel {
     }
     }
     
+    func delete(contact:Contact){
+        let success = self.database.delete(contact: contact)
+        if success{
+            self.contactList.value = self.database.getAllContacts().value
+            
+        }
+    
+    }
+    
 }

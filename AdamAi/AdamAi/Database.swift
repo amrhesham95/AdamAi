@@ -11,4 +11,5 @@ protocol Database {
     var localList :Observable<Array<Contact>>{get set}
     func getAllContacts() -> Observable<Array<Contact>>
     func saveToDatabase(contact:Contact) -> Bool
+    func delete(contact:Contact) -> Bool
 }

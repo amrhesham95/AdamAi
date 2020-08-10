@@ -89,6 +89,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EF691C9124E1D01300D9503A /* ContactDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ContactDetails;
+			sourceTree = "<group>";
+		};
 		EF8EC31324DD76E3000C589D /* AddContactScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +157,7 @@
 		EFD1534924DB3EB800A2E47E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EF691C9124E1D01300D9503A /* ContactDetails */,
 				EF8EC31324DD76E3000C589D /* AddContactScreen */,
 				EFD66F3824DC7B8500EF1BFF /* MainScreen */,
 				EFD1534A24DB3EBF00A2E47E /* WelcomeScreen */,

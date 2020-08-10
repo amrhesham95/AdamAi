@@ -71,6 +71,17 @@ extension MainScreenViewController:UITableViewDelegate,UITableViewDataSource,UIS
         self.view.frame.height / 6
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        self.mainScreenVM.delete(contact: self.mainScreenVM.contactList.value[indexPath.row])
+        
+        // if true remove from contactlist
+    }
+    
     //MARK:- searchBar method
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         mainScreenVM.getContactsWith(string: searchText)

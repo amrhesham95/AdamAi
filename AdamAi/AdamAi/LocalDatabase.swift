@@ -35,7 +35,6 @@ class LocalDatabase:Database {
         
         
         // get your UIImage jpeg data representation and check if the destination file url already exists
-//        let image = UIImage(contentsOfFile: fileURL.path)
         if let data = contact.image,
           !FileManager.default.fileExists(atPath: fileURL.path) {
             do {
@@ -54,24 +53,30 @@ class LocalDatabase:Database {
         }
         
         return false
-
-//        do {
-//            try realm.write { () -> Bool in
-//                realm.add(contact)
-//                viewModel?.contactList.value.append(contact)
-//                return true
-//            }
-//            return false
-//        } catch _ {
-//            return false
-//        }
-    
-
     }
     
     func getAllContacts() -> Observable<Array<Contact>> {
         let allContacts = Observable(Array(self.localList.value))
         return allContacts
+    }
+    
+    func delete(contact:Contact) -> Bool{
+
+        let realm = try! Realm()
+        let objToBeDelete  = realm.objects(Contact.self).filter("id='\(contact.id)'")
+        
+        do {
+            try realm.write {
+              realm.delete(objToBeDelete)
+            }
+            let result = realm.objects(Contact.self).filter("owner = '1'")
+            self.localList = Observable(Array(result))
+            return true
+        } catch let error {
+            print(error)
+            return false
+        }
+    
     }
     
     
