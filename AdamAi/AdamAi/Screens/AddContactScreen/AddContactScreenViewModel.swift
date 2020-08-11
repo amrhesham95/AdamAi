@@ -12,11 +12,16 @@ class AddContactScreenViewModel {
     var database:Database
     var isNameValid = true
     var isPhoneNumberValid = true
+    var pickerData = [String]()
     init(database:Database) {
         self.database = database
+
+        for element in Gender.allCases{
+            pickerData.append(element.description())
+        }
     }
     
-    func saveContact(name:String?, phoneNumber:String?, email:String?, nickname:String?, image:Data?, gender:Gender?) -> Bool{
+    func saveContact(name:String?, phoneNumber:String?, email:String?, nickname:String?, image:Data?, gender:Gender) -> Bool{
         // if validate true
         let contact = Contact(name: name!, phoneNumber: phoneNumber!, owner: "1", email: email, nickname: nickname, image: image, gender: gender)
         if validateContact(contact: contact){

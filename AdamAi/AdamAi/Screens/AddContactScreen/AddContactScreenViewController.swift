@@ -19,6 +19,7 @@ class AddContactScreenViewController:UIViewController{
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var saveContactButton: UIButton!
     
+    @IBOutlet weak var genderPickerView: UIPickerView!
     
     var imagePicker: ImagePicker!
     lazy var addContactScreenViewModel  = AddContactScreenViewModel(database: LocalDatabase.sharedInstance)
@@ -38,7 +39,7 @@ class AddContactScreenViewController:UIViewController{
      }
     
     @IBAction func saveContactButtonAction(_ sender: UIButton) {
-        let isSuccess = addContactScreenViewModel.saveContact(name: nameTextField.text, phoneNumber: phoneNumberTextField.text, email: emailTextField.text, nickname: nicknameTextField.text, image: contactImageView.image?.jpegData(compressionQuality: 1), gender:Gender.NOTSET)
+        let isSuccess = addContactScreenViewModel.saveContact(name: nameTextField.text, phoneNumber: phoneNumberTextField.text, email: emailTextField.text, nickname: nicknameTextField.text, image: contactImageView.image?.jpegData(compressionQuality: 1), gender:Gender(rawValue: self.genderPickerView.selectedRow(inComponent: 0))!)
         
         if isSuccess {
 //             dissmiss
@@ -55,8 +56,18 @@ class AddContactScreenViewController:UIViewController{
     
 }
 
-extension AddContactScreenViewController: ImagePickerDelegate {
-
+extension AddContactScreenViewController: ImagePickerDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+       return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        self.addContactScreenViewModel.pickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        self.addContactScreenViewModel.pickerData[row]
+    }
+    
     func didSelect(image: UIImage?) {
         self.contactImageView.image = image
     }

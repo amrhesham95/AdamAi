@@ -10,7 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
-@objc enum Gender: Int, RealmEnum {
+@objc enum Gender: Int, RealmEnum,CaseIterable {    
    case NOTSET
    case MALE
    case FEMALE
@@ -38,12 +38,13 @@ class Contact:Object {
 //    if we choose ly the following we cannot change it later as it constant
 //    let gender = RealmOptional<Gender>()
     @objc dynamic var owner:String
-    init(name:String, phoneNumber:String, owner:String, email:String?, nickname:String?, image:Data?, gender:Gender?) {
+    init(name:String, phoneNumber:String, owner:String, email:String?, nickname:String?, image:Data?, gender:Gender) {
         self.name = name
         self.phoneNumber = phoneNumber
         self.owner = owner
         self.email = email
         self.image = image
+        self.gender = gender
         super.init()
     }
     required init() {
