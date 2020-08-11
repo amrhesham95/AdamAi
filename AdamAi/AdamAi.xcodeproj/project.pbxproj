@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D7A696FCD0E50703BE2EFEDE /* Pods_AdamAi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C05028B3B3A2CEFC0A42C27 /* Pods_AdamAi.framework */; };
 		EF57557524E078D300FED87D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57557424E078D300FED87D /* ImagePicker.swift */; };
-		EF57557724E089AF00FED87D /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF57557624E089AF00FED87D /* ContactCellView.swift */; };
 		EF8EC31524DDBB20000C589D /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8EC31424DDBB20000C589D /* extensions.swift */; };
 		EF8EC31724DEF3D1000C589D /* AddContactScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8EC31624DEF3D1000C589D /* AddContactScreenViewController.swift */; };
 		EF8EC31924DF07B7000C589D /* AddContactScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8EC31824DF07B7000C589D /* AddContactScreenViewModel.swift */; };
@@ -25,6 +24,7 @@
 		EF98871B24DB2981004AAE1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871A24DB2981004AAE1C /* User.swift */; };
 		EFC7B78B24E1F30100DA0494 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7B78A24E1F30100DA0494 /* ContactDetailsViewController.swift */; };
 		EFC7B78D24E287CB00DA0494 /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7B78C24E287CB00DA0494 /* ContactDetailsViewModel.swift */; };
+		EFC7B79A24E331D400DA0494 /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7B79924E331D400DA0494 /* ContactCellView.swift */; };
 		EFD1534824DB36D900A2E47E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD1534724DB36D900A2E47E /* Contact.swift */; };
 		EFD66F3A24DC7B9D00EF1BFF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */; };
 		EFD66F3C24DC7BA700EF1BFF /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */; };
@@ -38,7 +38,6 @@
 		3C05028B3B3A2CEFC0A42C27 /* Pods_AdamAi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdamAi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F5D46B6621A89AA1EE3B82 /* Pods-AdamAi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdamAi.debug.xcconfig"; path = "Target Support Files/Pods-AdamAi/Pods-AdamAi.debug.xcconfig"; sourceTree = "<group>"; };
 		EF57557424E078D300FED87D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		EF57557624E089AF00FED87D /* ContactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellView.swift; sourceTree = "<group>"; };
 		EF8EC31424DDBB20000C589D /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		EF8EC31624DEF3D1000C589D /* AddContactScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreenViewController.swift; sourceTree = "<group>"; };
 		EF8EC31824DF07B7000C589D /* AddContactScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactScreenViewModel.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		EF98871A24DB2981004AAE1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EFC7B78A24E1F30100DA0494 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		EFC7B78C24E287CB00DA0494 /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
+		EFC7B79924E331D400DA0494 /* ContactCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCellView.swift; sourceTree = "<group>"; };
 		EFD1534724DB36D900A2E47E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
@@ -134,14 +134,10 @@
 			children = (
 				EFD1534924DB3EB800A2E47E /* Screens */,
 				EFD1534624DB36AC00A2E47E /* Models */,
+				EFC7B79724E330DF00DA0494 /* Protocols */,
+				EFC7B79824E3311C00DA0494 /* Helpers */,
 				EF9886FF24DB2251004AAE1C /* AppDelegate.swift */,
-				EF8EC31424DDBB20000C589D /* extensions.swift */,
-				EF57557424E078D300FED87D /* ImagePicker.swift */,
-				EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */,
-				EFD66F4124DC908B00EF1BFF /* ContactsListViewModel.swift */,
-				EFD66F3D24DC826300EF1BFF /* Database.swift */,
 				EF98870124DB2251004AAE1C /* SceneDelegate.swift */,
-				EF98871624DB247E004AAE1C /* Observable.swift */,
 				EF98870524DB2251004AAE1C /* Main.storyboard */,
 				EF98870B24DB2254004AAE1C /* Assets.xcassets */,
 				EF98870D24DB2254004AAE1C /* LaunchScreen.storyboard */,
@@ -149,6 +145,26 @@
 				EF98870824DB2251004AAE1C /* AdamAi.xcdatamodeld */,
 			);
 			path = AdamAi;
+			sourceTree = "<group>";
+		};
+		EFC7B79724E330DF00DA0494 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EFD66F3D24DC826300EF1BFF /* Database.swift */,
+				EFD66F4124DC908B00EF1BFF /* ContactsListViewModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EFC7B79824E3311C00DA0494 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EF57557424E078D300FED87D /* ImagePicker.swift */,
+				EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */,
+				EF98871624DB247E004AAE1C /* Observable.swift */,
+				EF8EC31424DDBB20000C589D /* extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		EFD1534624DB36AC00A2E47E /* Models */ = {
@@ -185,7 +201,7 @@
 			children = (
 				EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */,
 				EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */,
-				EF57557624E089AF00FED87D /* ContactCellView.swift */,
+				EFC7B79924E331D400DA0494 /* ContactCellView.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -316,8 +332,8 @@
 				EF98870424DB2251004AAE1C /* WelcomeViewController.swift in Sources */,
 				EFD66F4224DC908B00EF1BFF /* ContactsListViewModel.swift in Sources */,
 				EFD66F4024DC82AD00EF1BFF /* LocalDatabase.swift in Sources */,
+				EFC7B79A24E331D400DA0494 /* ContactCellView.swift in Sources */,
 				EFD1534824DB36D900A2E47E /* Contact.swift in Sources */,
-				EF57557724E089AF00FED87D /* ContactCellView.swift in Sources */,
 				EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */,
 				EFC7B78D24E287CB00DA0494 /* ContactDetailsViewModel.swift in Sources */,
 				EF8EC31924DF07B7000C589D /* AddContactScreenViewModel.swift in Sources */,
