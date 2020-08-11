@@ -22,12 +22,7 @@ class MainScreenViewModel:ContactsListViewModel {
     }
     
     func delete(contact:Contact){
-        let success = self.database.delete(contact: contact)
-//        if success{
-//            self.contactList.value = self.database.getAllContacts().value
-//
-//        }
-    
+        self.database.delete(contact: contact)
     }
     
     func getUserName() -> String {
