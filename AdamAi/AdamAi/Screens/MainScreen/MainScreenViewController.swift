@@ -23,6 +23,7 @@ class MainScreenViewController:UIViewController {
     
     //MARK:- viewController method
     override func viewDidLoad() {
+        navigationItem.hidesBackButton = true
         mainScreenVM.contactList.addObserver(fireNow: false) { (arr) in
             self.contactListTableView.reloadData()
         }

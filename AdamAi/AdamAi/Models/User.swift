@@ -10,4 +10,5 @@ import Foundation
 import RealmSwift
 struct User{
     var phoneNumber:String
+    var id = UUID().description
 }

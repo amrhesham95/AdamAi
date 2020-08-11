@@ -20,8 +20,7 @@ class LocalDatabase:Database {
       
        lazy var localList :Observable<Array<Contact>>={
            let realm = try! Realm()
-           // here we put the owner from the userDefaults so each user see his contacts
-           let result = realm.objects(Contact.self).filter("owner = '1'")
+           let result = realm.objects(Contact.self)
            let localList = Observable(Array(result))
            return localList
        }()
@@ -72,7 +71,7 @@ class LocalDatabase:Database {
             try realm.write {
               realm.delete(objToBeDelete)
             }
-            let result = realm.objects(Contact.self).filter("owner = '1'")
+            let result = realm.objects(Contact.self)
             self.localList.value = Array(result)
             return true
         } catch let error {

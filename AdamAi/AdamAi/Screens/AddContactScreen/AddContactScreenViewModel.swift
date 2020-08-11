@@ -23,7 +23,8 @@ class AddContactScreenViewModel {
     
     func saveContact(name:String?, phoneNumber:String?, email:String?, nickname:String?, image:Data?, gender:Gender) -> Bool{
         // if validate true
-        let contact = Contact(name: name!, phoneNumber: phoneNumber!, owner: "1", email: email, nickname: nickname, image: image, gender: gender)
+        let contact = Contact(name: name!, phoneNumber: phoneNumber!, email: email, nickname: nickname, image: image, gender: gender)
+        
         if validateContact(contact: contact){
             database.saveToDatabase(contact: contact)
             return true
