@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class MainScreenViewModel:ViewModel {
+class MainScreenViewModel:ContactsListViewModel {
     var contactList:Observable<Array<Contact>>
     var database:Database
     init(database:Database) {

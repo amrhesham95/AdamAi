@@ -23,12 +23,14 @@
 		EF98871724DB247E004AAE1C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871624DB247E004AAE1C /* Observable.swift */; };
 		EF98871924DB2936004AAE1C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871824DB2936004AAE1C /* WelcomeViewModel.swift */; };
 		EF98871B24DB2981004AAE1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98871A24DB2981004AAE1C /* User.swift */; };
+		EFC7B78B24E1F30100DA0494 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7B78A24E1F30100DA0494 /* ContactDetailsViewController.swift */; };
+		EFC7B78D24E287CB00DA0494 /* ContactDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC7B78C24E287CB00DA0494 /* ContactDetailsViewModel.swift */; };
 		EFD1534824DB36D900A2E47E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD1534724DB36D900A2E47E /* Contact.swift */; };
 		EFD66F3A24DC7B9D00EF1BFF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */; };
 		EFD66F3C24DC7BA700EF1BFF /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */; };
 		EFD66F3E24DC826300EF1BFF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3D24DC826300EF1BFF /* Database.swift */; };
 		EFD66F4024DC82AD00EF1BFF /* LocalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */; };
-		EFD66F4224DC908B00EF1BFF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F4124DC908B00EF1BFF /* ViewModel.swift */; };
+		EFD66F4224DC908B00EF1BFF /* ContactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD66F4124DC908B00EF1BFF /* ContactsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,12 +54,14 @@
 		EF98871624DB247E004AAE1C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		EF98871824DB2936004AAE1C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		EF98871A24DB2981004AAE1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EFC7B78A24E1F30100DA0494 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		EFC7B78C24E287CB00DA0494 /* ContactDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewModel.swift; sourceTree = "<group>"; };
 		EFD1534724DB36D900A2E47E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		EFD66F3924DC7B9D00EF1BFF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		EFD66F3B24DC7BA700EF1BFF /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		EFD66F3D24DC826300EF1BFF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabase.swift; sourceTree = "<group>"; };
-		EFD66F4124DC908B00EF1BFF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EFD66F4124DC908B00EF1BFF /* ContactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 		EF691C9124E1D01300D9503A /* ContactDetails */ = {
 			isa = PBXGroup;
 			children = (
+				EFC7B78A24E1F30100DA0494 /* ContactDetailsViewController.swift */,
+				EFC7B78C24E287CB00DA0494 /* ContactDetailsViewModel.swift */,
 			);
 			path = ContactDetails;
 			sourceTree = "<group>";
@@ -132,7 +138,7 @@
 				EF8EC31424DDBB20000C589D /* extensions.swift */,
 				EF57557424E078D300FED87D /* ImagePicker.swift */,
 				EFD66F3F24DC82AD00EF1BFF /* LocalDatabase.swift */,
-				EFD66F4124DC908B00EF1BFF /* ViewModel.swift */,
+				EFD66F4124DC908B00EF1BFF /* ContactsListViewModel.swift */,
 				EFD66F3D24DC826300EF1BFF /* Database.swift */,
 				EF98870124DB2251004AAE1C /* SceneDelegate.swift */,
 				EF98871624DB247E004AAE1C /* Observable.swift */,
@@ -300,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF98870A24DB2251004AAE1C /* AdamAi.xcdatamodeld in Sources */,
+				EFC7B78B24E1F30100DA0494 /* ContactDetailsViewController.swift in Sources */,
 				EFD66F3E24DC826300EF1BFF /* Database.swift in Sources */,
 				EFD66F3C24DC7BA700EF1BFF /* MainScreenViewModel.swift in Sources */,
 				EF57557524E078D300FED87D /* ImagePicker.swift in Sources */,
@@ -307,11 +314,12 @@
 				EF98871924DB2936004AAE1C /* WelcomeViewModel.swift in Sources */,
 				EF98871724DB247E004AAE1C /* Observable.swift in Sources */,
 				EF98870424DB2251004AAE1C /* WelcomeViewController.swift in Sources */,
-				EFD66F4224DC908B00EF1BFF /* ViewModel.swift in Sources */,
+				EFD66F4224DC908B00EF1BFF /* ContactsListViewModel.swift in Sources */,
 				EFD66F4024DC82AD00EF1BFF /* LocalDatabase.swift in Sources */,
 				EFD1534824DB36D900A2E47E /* Contact.swift in Sources */,
 				EF57557724E089AF00FED87D /* ContactCellView.swift in Sources */,
 				EF98870024DB2251004AAE1C /* AppDelegate.swift in Sources */,
+				EFC7B78D24E287CB00DA0494 /* ContactDetailsViewModel.swift in Sources */,
 				EF8EC31924DF07B7000C589D /* AddContactScreenViewModel.swift in Sources */,
 				EF98870224DB2251004AAE1C /* SceneDelegate.swift in Sources */,
 				EF8EC31724DEF3D1000C589D /* AddContactScreenViewController.swift in Sources */,

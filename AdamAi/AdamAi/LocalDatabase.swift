@@ -16,7 +16,7 @@ class LocalDatabase:Database {
         }
     }
     static let sharedInstance = LocalDatabase()
-    var viewModel:ViewModel?
+    var viewModel:ContactsListViewModel?
       
        lazy var localList :Observable<Array<Contact>>={
            let realm = try! Realm()

@@ -14,6 +14,17 @@ import RealmSwift
    case NOTSET
    case MALE
    case FEMALE
+    
+    func description() -> String {
+        switch self {
+        case .NOTSET:
+            return ""
+        case .MALE:
+            return "Male"
+        case .FEMALE:
+            return "Female"
+        }
+    }
 }
 class Contact:Object {
     @objc dynamic var id = UUID().description

@@ -7,6 +7,6 @@
 //
 
 import Foundation
-protocol ViewModel {
+protocol ContactsListViewModel {
     var contactList:Observable<Array<Contact>>{get set}
 }

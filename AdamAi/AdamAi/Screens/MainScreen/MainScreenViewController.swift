@@ -51,13 +51,7 @@ extension MainScreenViewController:UITableViewDelegate,UITableViewDataSource,UIS
         let fileName = mainScreenVM.contactList.value[indexPath.row].id
                // create the destination file url to save your image
         let fileURL = documentsDirectory.appendingPathComponent(fileName)
-//        cell.imageView?.image = UIImage(contentsOfFile: fileURL.path)
-//        cell.imageView?.circleImage()
-//        cell.textLabel?.text = mainScreenVM.contactList.value[indexPath.row].name
-//        cell.detailTextLabel?.text = mainScreenVM.contactList.value[indexPath.row].phoneNumber
-//        return cell
-        
-        //===========
+
         let contactCell = tableView.dequeueReusableCell(withIdentifier: "contactCell") as! ContactCellView
         contactCell.contactNameLabel.text = mainScreenVM.contactList.value[indexPath.row].name
         contactCell.contactNumberLabel.text = mainScreenVM.contactList.value[indexPath.row].phoneNumber
@@ -80,6 +74,16 @@ extension MainScreenViewController:UITableViewDelegate,UITableViewDataSource,UIS
         self.mainScreenVM.delete(contact: self.mainScreenVM.contactList.value[indexPath.row])
         
         // if true remove from contactlist
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+//        let contactDetailsViewController = ContactDetailsViewController(contactDetailsViewModel: ContactDetailsViewModel(contact: self.mainScreenVM.contactList.value[indexPath.row], database: self.mainScreenVM.database))
+        
+        let contactDetailsViewController = self.storyboard?.instantiateViewController(identifier: "ContactDetailsViewController") as! ContactDetailsViewController
+        contactDetailsViewController.contactDetailsViewModel = ContactDetailsViewModel(contact: self.mainScreenVM.contactList.value[indexPath.row], database: self.mainScreenVM.database)
+        
+        self.navigationController?.pushViewController(contactDetailsViewController, animated: true)
     }
     
     //MARK:- searchBar method
