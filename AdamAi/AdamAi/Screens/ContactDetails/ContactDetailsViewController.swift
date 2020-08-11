@@ -20,6 +20,7 @@ class ContactDetailsViewController: UIViewController {
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var contactImageView: UIImageView!
     
     var contactDetailsViewModel:ContactDetailsViewModel!
        override func viewDidLoad() {
@@ -38,6 +39,12 @@ class ContactDetailsViewController: UIViewController {
     }
     
     func initUI(contactDetailsViewModel:ContactDetailsViewModel){
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+               // choose a name for your image
+        let fileName = self.contactDetailsViewModel.contact.id
+               // create the destination file url to save your image
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        contactImageView.image = UIImage(contentsOfFile: fileURL.path)
         nameTextField.text = contactDetailsViewModel.contact.name
         phoneNumberTextField.text = contactDetailsViewModel.contact.phoneNumber
         emailTextField.text = contactDetailsViewModel.contact.email
