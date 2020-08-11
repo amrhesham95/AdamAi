@@ -7,5 +7,6 @@ target 'AdamAi' do
 
   # Pods for AdamAi
 	pod 'RealmSwift'
+	pod 'IQKeyboardManager'
 
 end
