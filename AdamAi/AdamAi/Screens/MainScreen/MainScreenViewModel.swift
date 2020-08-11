@@ -30,4 +30,11 @@ class MainScreenViewModel:ContactsListViewModel {
     
     }
     
+    func getUserName() -> String {
+        let defaults = UserDefaults.standard
+        var userName = defaults.string(forKey: "userName")
+        userName?.append("'s contacts")
+        return userName ?? ""
+    }
+    
 }

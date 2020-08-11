@@ -27,6 +27,7 @@ class MainScreenViewController:UIViewController {
         mainScreenVM.contactList.addObserver(fireNow: false) { (arr) in
             self.contactListTableView.reloadData()
         }
+        self.navigationItem.title = mainScreenVM.getUserName()
     }
     
     
